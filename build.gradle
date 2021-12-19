@@ -1,0 +1,27 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
+    id 'maven-publish'
+}
+
+group 'com.github.droidbaza'
+version '1.0.0-alpha04'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21'
+}
+
+gradlePlugin {
+    plugins {
+        mockJson {
+            id = 'com.github.droidbaza.mock-json'
+            implementationClass = 'com.github.droidbaza.MockJsonPlugin'
+        }
+    }
+}
