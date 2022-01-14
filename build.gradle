@@ -1,19 +1,24 @@
 plugins {
-    id 'java-gradle-plugin'
     id 'org.jetbrains.kotlin.jvm' version '1.5.21'
+    id 'java-gradle-plugin'
     id 'maven-publish'
     id "com.gradle.plugin-publish" version "0.18.0"
 }
 
-group 'io.droidbaza'
-version '1.0.0-alpha04'
-
+group 'org.droidbaza'
+version '1.0.0-alpha05'
 sourceCompatibility = 1.8
+
+pluginBundle {
+    website = 'https://github.com/droidbaza/mock-json-plugin'
+    vcsUrl = 'https://github.com/droidbaza/mock-json-plugin'
+    tags = ['json', 'mock','mockwebserver','testing','android']
+}
 
 gradlePlugin {
     plugins {
         create("mockJsonPlugin") {
-            id = 'io.droidbaza.mock-json'
+            id = 'org.droidbaza.mock-json'
             displayName = "Mock Json Plugin"
             description = "Mock Jsons Easy for testing with mockWebServer!"
             implementationClass = "com.github.droidbaza.MockJsonPlugin"
@@ -27,30 +32,4 @@ repositories {
 
 dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21'
-}
-
-pluginBundle {
-    // These settings are set for the whole plugin bundle
-    website = 'https://github.com/droidbaza/mock-json-plugin'
-    vcsUrl = 'https://github.com/droidbaza/mock-json-plugin'
-
-    // tags and description can be set for the whole bundle here, but can also
-    // be set / overridden in the config for specific plugins
-    description = 'Mock Json plugin'
-
-    // The plugins block can contain multiple plugin entries. The name for
-    // each plugin block below (greetingsPlugin, goodbyePlugin)does not
-    // affect the plugin configuration, but they need to be unique for each plugin.
-
-    // Plugin config blocks can set the displayName, description and tags for
-    // each plugin. displayName is mandatory. If no tags or description are set
-    // the tags or description from the pluginBundle block will be used,
-    // but they must be set in one of the two places.
-
-    plugins {
-        mockJsonPlugin {
-            displayName = "Mock Jsons Easy!"
-            tags = ['mock', 'test', 'json', 'plugin']
-        }
-    }
 }
