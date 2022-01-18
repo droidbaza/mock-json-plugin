@@ -1,6 +1,6 @@
 # mock-json-plugin
-gradle plugin for easy loading  and saving jsons responses from server for testing.
-Intead of manual loading and saving json responces into test resaources - all you need that is apply end set up this plugin, 
+gradle plugin for easy fast loading  and saving jsons responses from server for testing.
+Instead of manual loading and saving json responces into test resaources - all you need that is apply end set up this plugin, 
 run command `./gradlew loadMocks` and all needed requests authomatically will be loaded and saved into target directory.
 
 ## How to add
