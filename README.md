@@ -50,6 +50,10 @@ mockJsonConfig{
             "EXAMPLE_REQUEST_NAME":"api/example_request_path",
             ...
             ]
+    //optional
+    configPath = "src/test/java", //MockConfig target path
+    //optional
+    filesPath = "src/test/resources",// json responses target path
 }
 ```
 Next sync project and run command  `./gradlew loadMocks`
