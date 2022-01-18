@@ -41,7 +41,8 @@ plugins {
     id 'org.droidbaza.mock-json'
 }
 ```
-Set up and list the basic server requests that need to be loaded.
+and set up plugin configuration with base url address and list
+ of the basic server requests that needs to be loaded.
 ```kotlin
 mockJsonConfig{
     baseUrl ="https://example.com/"
